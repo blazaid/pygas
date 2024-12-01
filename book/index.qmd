@@ -1,0 +1,15 @@
+# Prefacio {.unnumbered}
+
+¡Hola! Me llamo Alberto y soy profesor en la Universidad Politécnica de Madrid, en la Escuela Técnica Superior de Ingeniería de Sistemas Informáticos. Llevo años enseñando y desarrollando en Python, un lenguaje que no solo me apasiona, sino que también se ha convertido en mi herramienta principal para prácticamente todo lo que hago: desde pequeñas utilidades hasta proyectos de investigación en inteligencia artificial, simulación y optimización.
+
+Como investigador, trabajo principalmente en el área del aprendizaje profundo y redes neuronales, pero también me encanta explorar cómo resolver problemas complejos mediante simulación y técnicas de optimización. Y en todo esto, Python siempre está ahí: es versátil, potente y, en mi opinión, uno de los mejores lenguajes para abordar cualquier desafío. Si necesitas escribir un algoritmo, analizar datos, crear una aplicación web o simplemente automatizar tareas, Python siempre tiene una solución.
+
+La idea de este libro nace del deseo de compartir ese entusiasmo y de ofrecer un recurso completo y actualizado, no solo para mis asignaturas o las de mis compañeros y amigos, sino para toda la comunidad. Quiero que sea una referencia accesible para quienquiera que lo necesite, ya seas estudiante, profesor, programador en ciernes o simplemente alguien que quiere aprender algo nuevo.
+
+Este no es un libro académico aburrido lleno de teorías que nunca pondrás en práctica. Es un libro pensado para usar: incluye explicaciones claras, ejemplos prácticos, proyectos completos y soluciones a problemas reales. Mi intención es que, cuando tengas una duda o quieras aprender algo nuevo, encuentres aquí las respuestas.
+
+Espero que disfrutes leyendo este libro tanto como yo disfruté escribiéndolo. Y, sobre todo, espero que te ayude a entender por qué Python es más que un lenguaje de programación: es una puerta de entrada a la creatividad, la resolución de problemas y el desarrollo de ideas.
+
+¡Bienvenido al mundo de Python! 😊
+
+Alberto

@@ -1,0 +1,4 @@
+{
+    "markdown.marp.themes": ["slides/styles.css"],
+    "markdown.marp.enableHtml": true
+}

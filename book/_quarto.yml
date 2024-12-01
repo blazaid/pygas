@@ -1,0 +1,36 @@
+project:
+  type: book
+
+book:
+  title: "El mejor libro de Python del mundo"
+  author: "Alberto Díaz"
+  date: today
+  date-format: full
+  chapters:
+    - index.qmd
+    - chapters/00-introduction.qmd
+    - part: "Parte 1. Fundamentos de Python"
+      chapters:
+        - chapters/part-1-fundamentals/01-intro-to-python.qmd
+        #- chapters/02-variables.qmd
+        #- chapters/03-strings.qmd
+        #- chapters/04-lists.qmd
+        #- chapters/05-tuples.qmd
+        #- chapters/06-dictionaries.qmd
+        #- chapters/07-sets.qmd
+        #- chapters/08-conditions.qmd
+        #- chapters/09-loops.qmd
+        #- chapters/10-functions.qmd
+        #- chapters/11-modules.qmd
+        #- chapters/12-exceptions.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+lang: es-ES

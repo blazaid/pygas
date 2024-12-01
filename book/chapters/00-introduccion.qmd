@@ -1,0 +1,82 @@
+Python no es solo un lenguaje de programación; es una herramienta poderosa que te permite resolver problemas de forma
+creativa, eficiente y divertida. Diseñado por Guido van Rossum a principios de los años 9, Python combina una sintaxis
+simple y legible con una capacidad de uso en prácticamente cualquier campo, desde el desarrollo web hasta la
+inteligencia artificial.
+
+¿Y por qué se llama Python? La respuesta puede sorprenderte: no tiene nada que ver con serpientes. Guido era muy fan de
+los Monty Python, el famoso grupo de comedia británico, y quiso darle a su lenguaje un nombre que transmitiera
+creatividad y algo de humor.  Así que sí, Python lleva un poco de ese espíritu irreverente en su ADN, y si alguna vez te
+has preguntado por qué los ejemplos de Python tienen nombres como `spam`, `eggs` o algo similar, ya sabes la respuesta.
+
+Pero más allá del nombre, ¿por qué Python?
+
+- Es un lenguaje fácil de aprender. Su sintaxis es limpia y cercana al lenguaje humano.
+- Tiene una comunidad activa. Cualquier duda que tengas, seguro que alguien ya la ha preguntado (y respondido) en foros
+    como Stack Overflow.
+- Es multiplataforma. Puedes usar Python en Windows, macOS o GNU/Linux sin problemas. Aunque entre nosotros, si te estás
+    planteando qué sistema operativo elegir, te recomiendo GNU/Linux. Y si no te lo estás planteando, también te
+    recomiendo que le des una oportunidad.
+
+## ¿Qué podemos hacer con Python?
+
+Pues la verdad es que prácticamente de todo. Python es un todoterreno que se adapta a tus necesdades, ya sea que estés
+iniciándote en la programación o desarrollando aplicacinoes de última generación. Aquí te damos un vistazo a algunas
+áreas donde Python brilla:
+
+### Automatización y Scripts
+
+¿Cansado de repetir tareas? Python puede ayudarte a automatizar procesos aburridos, como renombrar archivos, enviar
+correos masivos, o incluso recordarte regar tus plantas.
+
+```python
+import os
+files = os.listdir('dir')
+for i, file in enumerate(files, start=1):
+    new_name = f'archivo_misterioso_{i}.txt'
+    os.rename(f'dir/{file}', f'dir/{new_name}')
+    print(f"Adiós, {file}. Hola, {new_name}. ¡Ahora nadie sabrá quien eras!")
+```
+
+### Desarrollo web
+
+Con _frameworks_ como Django o Flask, Python es el motor detrás de muchas páginas y aplicaciones web. Es rápido, seguro
+y fácil de usar. Mira qué sencillo es crear una aplicación web con Flask:
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+```
+
+### Análisis de datos
+
+¿Te gustan los gráficos bonitos? Hay gente que disfruta mucho analizando grandes conjuntos de datos tabulares. Con
+bibliotecas como `pandas`, `matplotlib` o `seaborn`, puedes analizar y visualizar cualquier cosa, desde tus finanzas
+personales hasta datos de sondas espaciales. Si no, mira qué fácil es hacer un gráfico de dispersión con `pandas`:
+
+```python
+import pandas as pd
+
+data = pd.read_csv('datos.csv')
+data.plot(kind='scatter', x='edad', y='salario')
+```
+
+### Inteligencia artificial
+
+Python es el lenguaje que domina el campo de la inteligencia artificial y el aprendizaje automático. Frameworks como
+TensorFlow o PyTorch permiten a los desarrolladores construir modelos que reconocen gatos en imágenes, entienden texto o
+incluso predicen el futuro.
+
+### Videojuegos
+
+Aunque no es el primer lenguaje que viene a la mente cuando se habla de videojuegos, Python puede ser una opción
+sorprendentemente buena. Con Pygame, puedes desarrollar tus propios juegos en 2D y aprender los fundamentos del diseño
+de juegos.
+
+### Aplicaciones científicas
+
+Python es un estándar en el mundo académico y científico. Herramientas como NumPy y SciPy son esenciales para
+matemáticos, físicos e ingenieros que buscan modelar y simular fenómenos complejos.
