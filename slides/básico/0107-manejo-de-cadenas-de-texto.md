@@ -1,0 +1,1 @@
+Qué son (que básicamente son tuplas), manipulación de cadenas, formateo de cadenas )las chuscas, el método format y las f-string)

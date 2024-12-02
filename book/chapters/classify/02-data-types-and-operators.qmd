@@ -1,0 +1,337 @@
+# Primitivas del lenguaje
+
+Python, como cualquier lenguaje de programación, tiene varios tipos de datos que son como las herramientas de un 
+mecánico: cada una sirve para algo diferente, y saber cuál usar en cada momento es clave.
+
+Empezaremos viendo los tipos de datos básicos y aprenderemos a jugar con ellos usando operadores. Más adelante, en
+capítulos posteriores, trabajaremos con tipos de datos y operadores más complejos (pero más divertidos). Prepárate,
+porque empieza lo interesante.
+
+- **TODO**: En este capítulo vamos a hablar de las primitivas del lenguaje, así que no está de más hablar no solo de los
+  built-in datatypes. sino también de qué son variables, de los comentarios, de la sintaxis y de la semántica.
+
+## Comentarios
+
+Para comentar en Python se hace uso del carácter #. Desde ese caráctr hasta el final de línea, todo es ignorado por el
+intérprete.
+
+```python
+# Esto es un comentario en una única línea
+```
+
+Los comentarios multilínea, con naturales en otros lenguajes. Aquí también existen, pero tienen una particularidad. Por
+ahora, vamos a dejarlo en que cualquier cuerpo de texto encerrado entre tres comillas del mismo tipo, simples (`'`) o
+dobles (`"`) es un comentario y también e ignorado por el intérprete.
+
+```python
+'''
+Soy un comentario multilínea
+'''
+
+"""
+Yo también
+"""
+```
+
+## Variables
+
+Las variables sirven para almacenar datos que cambian (o no) a lo largo de la ejecución del programa. Para guardar un
+valor en una variable se usa el operador de asignación `=`.
+
+```python
+a = 5
+print(a)
+```
+
+En Python **todo son objetos**, lo que a estas alturas del libro os da exactamente igual. Solo quedáos con el siguiente
+concepto: Cuando asignamos un valor a una variable, no estamos «metiendo» el valor dentro de la variable, sino que
+estamos diciéndole a la variable «oye, variable, apunta a donde está este valor en memoria para que cada vez que te
+pregunte por él me lo devuelvas». Si no entendéis esto no os preocupéis, cuando estemos viendo colecciones lo
+entenderéis un poco mejor.
+
+## Tipos de datos
+
+Los tipos de datos son las «cajas» donde guardamos información. En Python, estas cajas son flexibles, que en jerga
+técnica se denomina «tipado dinámico»: Cada caja puede guardar un dato diferente. ¡Pero ojo! Python es un lenguaje
+«fuertemente tipado», lo que significa que si algo necesita un dato de un tipo concreto y se le da un dato diferente,
+ese algo se va a quejar.
+
+- **TODO** cadenas, listas, tuplas, conjuntos y diccionarios
+
+### Números
+
+En Python existen dos tipos de valores numéricos, los enteros (`int`) y los de coma flotante (`float`).
+
+```python
+a = 7    # Valor entero
+b = 7.0  # Valor de coma flotante
+```
+
+#### Números enteros (`int`)
+
+Los enteros son los números que en matemáticas decimos que pertenecen al conjunto $\mathbb{Z}$. Sirven para contar
+cosas, calcular edades, ... Vamos, para cualquier cosa que necesitemos un entero.
+
+```python
+edad = 25
+```
+
+Una cosa interesante de los números enteros es que tienen una resolución prácticamente infinita. No son como en otros lenguajes donde los enteros tienen un número de bits fijo para ser representados (por ejemplo 32 o 64 bits) sino que, ocupan todo lo que nos permita la memoria de nuestro ordenador.
+
+TODO: Poner ejemplos. Incluir el de cuántos bits necesitaríamos para cada número. Hablar también de las diferentes formas de escribir enteros. Hablar también de los caracteres de _ dentro de los números enteros. 
+
+#### Numeros de coma flotante (`float`)
+
+Son números con decimales. Son perfectos para cálculos más precisos, como dividir la cuenta del restaurante. Es mejor
+que nos inviten, pero bueno, no se puede tener todo. Tenemos número de coma flotante, eso sí.
+
+```python
+precio = 19.99
+print(precio)
+```
+
+### Valores lógicos (`bool`)
+
+Los lógicos o booleanos son ideales para preguntas de sí o no. Solo tienen dos valores posibles: `True` o `False` que,
+como su propio nombre indica, representan un valor de verdadero o falso respectivamente.
+
+```python
+es_python_divertido = True
+en_windows_también = False
+```
+
+### Cadenas (`str`)
+
+Dos cosas sobre cadenas de texto: la primera, son un tipo de dato básico en el lenguaje, no como en otros, que son
+arrays de caracteres terminados en el carácter `'\0'` o cosas similares; la segunda, que no existe el concepto de «caracter», sino que para ello lo que usamos son cadenas de un único carácter.
+
+Las cadenas se definen en Python como cualquier secuencia de texto entrecomillada, ya sea por comillas dobles (`"`) o simples (`'`).
+
+```python
+una_cadena = "Hola, soy Python"
+otra_cadena = 'Hola, yo también'
+```
+
+Existe la opción de hacer cadenas multilínea. Para ello, la cadena debe estar delimitada por tres comillas (también, dobles o simples).
+
+```python
+cadenón = """Soy una cadena
+que abarca varias líneas"""
+```
+
+Python es tan flexible que puedes mezclar estos tipos sin que el lenguaje se queje demasiado (al menos no al principio). Por ejemplo:
+
+```python
+nombre = "Vera"
+edad = 5
+print(f"{nombre} tiene {edad} años.")
+```
+
+## Operadores, o cómo jugar con los datos
+
+Tener datos es una cosa, pero gran parte del tiempo tenemos que estar combinándolos. Los operadores son la forma más
+básica para combinar y modificar. Vamos a dar un repaso por los principales tipos de operadores que tenemos a nuestra
+disposición.
+
+### Operadores aritméticos
+
+Son los clásicos de toda la vida: sumar, restar, multiplicar y dividir.
+
+```python
+a = 10
+b = 3
+print(a + b)  # Suma: 13
+print(a - b)  # Resta: 7
+print(a * b)  # Multiplicación: 30
+print(a / b)  # División: 3.333...
+```
+
+Además, incluye operadores más específicos:
+
+- División entera (`//`): Devuelve solo la parte entera de la división.
+- Módulo (`%`): Devuelve el resto de una división.
+- Potencia (`**`): Calcula potencias.
+
+```python
+print(a // b)  # División entera: 3
+print(a % b)   # Módulo: 1
+print(a ** b)  # Potencia: 1000
+```
+
+- **TODO**: No he hablado del operador `-`. Comentar que en python 2 el operador división era la división entera si los dos
+valores eran enteros. Tampoco he hablado de los problemas de resolución en coma flotante (a = 1; b = 0.9; a - b), de los operadores de modificación-asignación (+=, -=, *=, /*).
+
+### Operadores de comparación
+
+Son operadores que, como su propio nombre indica, comparan valores y devuelven un booleano (`True` o `False`).
+
+```python
+print(a > b)   # Mayor que: True
+print(a < b)   # Menor que: False
+print(a == b)  # Igual a: False
+print(a != b)  # Distinto de: True
+```
+
+Estos operadores son muy útiles cuando queramos programar algo que funcione de formas diferentes dependiendo de si se
+cumple (`True`) o no (`False`) una condición.
+
+Por cierto, **NUNCA** intentéis comparar dos valores de coma flotante, porque es un error muy difícil de detectar.
+
+```python
+1 - 0.9 == 0.1  # Esto, contra todo pronóstico, es False
+```
+
+No solo es cosa de Python, pasa en prácticamente todos los lenguajes. Es debido al problema de la resolución de los
+float que hemos visto antes. Para comparar números reales **SIEMPRE** hay que ver si está dentro de un intervalo.
+
+```python
+0.099999 < 1 - 0.9 < 0.100001  # Mucho mejor que antes
+```
+
+### Operadores lógicos
+
+No todas las condiciones son tan simples como comparar un par de valores, y por ello existen estos operadores. Son
+perfectos para combinar condiciones y hacer preguntas más complejas.
+
+- AND (`and`): Devuelve `True` si ambas condiciones son ciertas.
+- OR (`or`): Devuelve `True` si al menos una condición es cierta.
+- NOT (`not`): Invierte el resultado de una condición.
+
+```python
+x = 5
+print(x > 3 and x < 10)  # True
+print(x > 3 or x < 2)    # True
+print(not(x > 3))        # False
+```
+
+### Operadores de asignación
+
+Estos operadores nos permiten asignar valores a las variables.
+
+```python
+x = 10  # Asignación directa
+x += 5  # Suma y asigna: x = x + 5
+x -= 3  # Resta y asigna: x = x - 3
+x *= 2  # Multiplica y asigna: x = x * 2
+x /= 4  # Divide y asigna: x = x / 4
+print(x)
+```
+
+### Operadores específicos de cadenas
+
+Hemos dicho previamente que las cadenas son un tipo básico de Python, y por tanto existen un montón de operaciones que
+son naturales para ellas. Las cadenas son mucho más versátiles de lo que parecen.
+
+- Concatenación (`+`): Junta dos cadenas.
+- Repetición (`*`): Repite una cadena varias veces.
+- Slicing: Extrae partes de una cadena.
+
+```python
+saludo = "Hola"
+nombre = "Mundo"
+print(saludo + " " + nombre)  # Hola Mundo
+print(saludo * 3)            # HolaHolaHola
+
+frase = "Python es genial"
+print(frase[0:6])  # Python
+print(frase[-6:])  # genial
+```
+
+### El operador `is`
+
+Existe también un operador denominado `is` que compara dos variables para ver, no si son iguales, sino que apunten
+exactamente al mismo objeto.
+
+```python
+2 is 2    # True
+2. is 2.  # True
+a = 2.
+2. is a   # False!
+```
+
+Esta tontería puede darnos también muchos quebraderos de cabeza. Mirad si no el siguiente ejemplo.
+
+```python
+i = 0
+while 0 + i is i:
+    i+=1
+print(i)  # 257
+```
+
+Si no entiendes este código, puedes volver después de darle una vuelta al capítulo 3 y los bucles (dar una vuelta por
+los bucles, esa es buena). `i` es `257` porque Python, al igual que muchos otros lenguajes, guarda una caché con los
+valores para no estar creando objetos sin ton ni son por la memoria. No hay que olvidar que cada vez que se crea un
+objeto, ocupamos memoria, y si podemos reutilizar pues mejor. Por eso Python mantiene muchas tablas con valores que
+suelen ser comunes para usarlos siempre en lugar de estar creando nuevos objetos con el mismo valor.
+
+Viene bien recordar esto, así no nos pillará por sorpresa. Sobre todo cuando, después de ejecutar lo de antes, hagamos esto:
+
+```python
+0 + 257 is 257  # True
+```
+
+Por cierto, cuando comparemos valores directamente, y no variables, Python nos dará un mensaje de _warning_ diciéndonos «oye, a ver si vas a estar equivocándote, y lo que quieres usar es `==`...».
+
+## El poder combinado
+
+El verdadero poder de los operadores viene cuando los combinas con diferentes tipos de datos para crear cosas útiles.
+Por ejemplo:
+
+```python
+edad = 25
+nombre = "Ana"
+mensaje = f"{nombre} cumplirá {edad + 1} años el próximo año."
+print(mensaje)
+```
+
+Aquí combinamos cadenas, enteros y operadores para generar un mensaje dinámico. Así de fácil es trabajar con Python.
+
+## Errores comunes (y cómo sobrevivir a ellos)
+
+Los errores en esta etapa suelen ser simples pero frustrantes. Algunos clásicos:
+
+### División por cero
+
+```python
+print(10 / 0)  # ZeroDivisionError
+```
+
+¡Prohibido en matemáticas y en Python!
+
+### Concatenar texto con números
+
+```python
+print("Tienes " + 30 + " años")  # TypeError
+```
+
+¿Recordáis cuando hemos dicho que python era «fuertemente tipado»? Pues a esto nos referíamos. El operador `+` para
+concatenar dos cadenas espera dos cadenas, no una cadena y un entero. Podemos hacer que funcione convirtiendo antes
+el número en una cadena:
+
+```python
+print("Tienes " + str(30) + " años")  # Oh sí
+```
+
+### Índices fuera de rango
+
+```python
+texto = "Python"
+print(texto[10])  # IndexError
+```
+
+Los índices deben estar dentro del rango de la cadena, si no el intérprete se queja.
+
+
+---
+
+## TODO
+
+- Quizá deberíamos hablar de que todos los valores de python son objetos?
+- Deberíamos tener una cheatsheet en el repo
+- Quizá la primera parte estaría guay que fuese una introducción a todo el lenguaje para ponerse a full con él en el
+  menor tiempo posible. La primera parte o el segundo capítulo antes de la primera parte.
+- Creo que las cadenas se merecen su propia sección, porque habría que hablar también de slicing y de formateo de
+  cadenas (con sus respectivos ejemplos y ejercicios).
+- Anidar comillas en cadenas
+- Formateo de cadenas
+- 

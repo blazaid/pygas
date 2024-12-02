@@ -1,0 +1,1 @@
+hablar de conceptos básicos de programación: básicamente lo que es algoritmo, lo que es el pseudocódigo. Qué son variables y tipos de variable, cuáles son los tipos básicos, como se declaran y se asignan variables y buenas prácticas a seguir en nombres de variables.

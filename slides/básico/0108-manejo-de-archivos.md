@@ -1,0 +1,1 @@
+Lectura y escritura de archivos, apertura de ficheros con `with open` (pero no hablamos de contextos), ficheros binarios y de texto y no sé qué más.

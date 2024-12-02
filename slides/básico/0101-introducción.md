@@ -1,0 +1,1 @@
+Qué es python (historia, versiones y usos), por qué es interesante aprender python (con ventajas e inconvenientes), cómo se instala python, cómo se trabaja con el intérprete de comandos, cómo se escribe un script de python y cómo se ejecuta un script de python desde la línea de comandos. Usar el script con hola mundo pero con algo de los Monty Python.

@@ -1,0 +1,1 @@
+Qué son los módulos y las librerías, importación de módulos, módulos esrtándar, introducción a pip y a la instalación de librerías, quizá estaría bien hablar aquí de entornos virtuales. También hay que hablar del __init__.py y del __all_

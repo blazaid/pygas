@@ -1,0 +1,1 @@
+Operadores aritméticos, relacionales y lógicos. Expresiones y precedencia de operadores. Algunos ejemplos chorra. Hablar de idioms, de los problemas de precisión de los float.

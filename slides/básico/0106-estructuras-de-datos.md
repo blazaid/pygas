@@ -1,0 +1,1 @@
+Hablar en profundidad de listas, tuplas, diccionarios y conjuntos. Cadenas no, que así les dedicamos otro conjunto de transparencias.

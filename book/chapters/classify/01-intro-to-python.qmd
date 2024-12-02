@@ -1,0 +1,141 @@
+# Introducción a Python
+
+Python es más que un lenguaje de programación; es una herramienta que ha revolucionado la forma en que pensamos y
+trabajamos con código. Da igual que estés empezando o que lleves muchos años y quieras expandir tus horizontes; Python
+es la elección natural por su claridad, versatilidad y su capacidad para crecer contigo.
+
+En este capítulo vamos a echar un vistazo a los orígenes del lenguaje, sus fundamentos y todo lo necesario para empezar
+a trabajar con él.
+
+## Un vistazo rápido a su historia
+
+Python fue creado por Guido van Rossum en 1991, en los Países Bajos, mientras trabajaba en un proyecto personal para
+desarrollar un lenguaje que equilibrara potencia y simplicidad. Inspirado por lenguajes como ABC y C, Guido quería algo
+que fuera intuitivo y divertido, tanto para novatos como para expertos. Por eso, Python es un lenguaje que «piensa en el
+programador»: minimiza la complejidad técnica para que puedas concentrarte en resolver problemas.
+
+El espíritu de Python siempre ha sido facilitar el aprendizaje y fomentar la creatividad. Y sí, su nombre viene de Monty
+Python, un grupo de comedia británica. Así que no es raro que en la comunidad de Python haya un toque de humor y mucha
+camaradería.
+
+## ¿Qué es lo que hace a Python tan especial?
+
+Hay lenguajes de programación para todo: unos son más rápidos, otros más especializados, pero Python tiene algo que lo
+hace único: es amigable y flexible a la vez. Esto significa que puedes aprenderlo rápido y, al mismo tiempo, utilizarlo
+para proyectos complejos.
+
+Algunas de las razones por las que Python destaca:
+
+- **Es legible**: Su sintaxis es como hablar o escribir en inglés. Si has visto otros lenguajes como C o Java, notarás
+  que Python es menos verboso y más directo.
+- **Es inclusivo**: La comunidad de Python es famosa por ser abierta y estar siempre dispuesta a ayudar.
+- **Es el lenguaje del futuro**: Con la creciente demanda de inteligencia artificial, ciencia de datos y automatización,
+  Python se ha convertido en el estándar de facto para estas áreas.
+
+## Preparando el terreno
+
+Antes de lanzarte a programar, necesitas preparar tu entorno. Pero no te preocupes, esto es más fácil que montar un
+mueble de IKEA (y hay menos tornillos).
+
+### Instalación de Python
+
+Lo primero es instalar Python (obvio). La forma más sencilla es visitar [python.org](https://www.python.org/) y
+descargar la versión adecuada para tu sistema operativo. Sigue las instrucciones del instalador, y si estás en Windows,
+asegúrate de marcar la casilla que dice **_Add Python to PATH_**. Si no lo haces, podrías pasar horas buscando en Google
+por qué tu terminal no reconoce el comando python.
+
+### Usar un buen editor
+
+Un editor de código es tu lienzo y, aunque puedes empezar con algo simple como IDLE (que viene con Python), es
+recomendable usar algo más avanzado como:
+
+- VSCode: Ligero, rápido y lleno de extensiones útiles.
+- PyCharm: Ideal si planeas trabajar en proyectos más grandes.
+- Jupyter Notebooks: Perfecto para experimentos rápidos y ciencia de datos.
+
+¿Mi recomendación? Empezar con un edior de texto sin ningún tipo de ayuda. El `notepad` en windows o `vi` en GNU/Linx.
+La razón es que haciendo esto vas a aprender mucho más al tener que estar haciendo muchos procesos manuales que las
+herramientas que hemos descrito antes te evitan. Así las sabrás valorar más, además de que serás capaz de entender el
+porqué de algunos errores peregrinos que te encuentres.
+
+### Entornos virtuales
+
+Normalmente de esto no se habla tan pronto, pero es una muy buena práctica que ayuda a quitarse quebraderos de cabeza y
+a programar bien desde un principio. Los entornos virtuales son como pequeñas burbujas donde cada proyecto tiene sus
+propias librerías y dependencias, sin interferir con otros proyectos. Para crearlos es muy sencillo, basta con invocar
+el módulo `venv` de Python.
+
+```bash
+python -m venv .venv
+```
+Con esto, se creará un directorio llamado `.venv` que se incluirá toda la información de tu entorno virtual. Para
+activarlo, bastará con ejecutar el script `activate` que, dependiendo de en qué sistema operativo te encuentres será
+diferente.
+
+En casi todos los sistemas operativos:
+
+```bash
+source .venv/bin/activate
+```
+
+En Windows (por llevar la contraria)
+
+```bash
+.venv\Scripts\activate
+```
+
+Cuando termines, desactívalo con:
+
+```bash
+deactivate
+```
+
+Esto puede parecer un paso extra, pero de verdad, confía en mí. Te salvará de futuros dolores de cabeza.
+
+## Tu primer programa: _"¡Hola, mundo!"_
+
+El primer programa que escribe cualquier programador es el icónico "¡Hola, mundo!". En Python, es tan simple como:
+
+```python
+print("¡Hola, mundo!")
+```
+
+Ejecuta esta línea y tu ordenador te saludará. ¿Fácil, verdad? Este pequeño paso es la base de cosas mucho más grandes.
+Puede parecer una anécdota, pero es mucho más porque nos ayuda a saber si tenemos bien instalado el entorno de
+compilación. 
+
+## Errores: tus aliados en el camino
+
+Una parte esencial de aprender a programar es cometer errores. Muchos. Y con Python, esto será más una conversación que
+una bronca. Cuando algo no funcione, Python te dirá exactamente qué fue mal y dónde. Por ejemplo:
+
+```
+SyntaxError: unexpected EOF while parsing
+```
+
+Aunque parezca un mensaje críptico, solo significa que te olvidaste de cerrar algo, como un paréntesis o una comilla.
+Plantéate estos errores como pistas en una _escape room_, y verás como te cambia el chip.
+
+## Un vistazo a lo que viene
+
+Python no es solo escribir programas que digan "¡Hola, mundo!". En los próximos capítulos, exploraremos:
+
+- Cómo manejar datos y colecciones.
+- Los operadores que te permiten manipular todo tipo de información.
+- Cómo estructurar programas más complejos con funciones.
+
+Esto es solo el comienzo de un viaje que te llevará desde conceptos básicos hasta aplicaciones avanzadas. Pero, por
+ahora, celebra este primer paso. Estás a punto de descubrir por qué Python es el lenguaje favorito de millones de
+personas.
+
+¡Vamos allá!
+
+-----
+
+# TODO
+
+- Hablar del intérprete
+- Import this y explicar el zen muy brevemente
+- Hablar de las funcione útiles (al menos print, type, dir)
+- No hemos hablado de la sintaxis y de que faltan puntos y comas, llaves y demás chorradas
+- No hemos dicho que la sintaxis soporta UTF8

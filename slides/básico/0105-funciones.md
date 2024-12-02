@@ -1,0 +1,1 @@
+Qué es una función, a lo mejor diferenciar entre función y procedimiento, definición y uso de funciones, parámetros y retorno de valores, _scope_ de las variables y funciones anónimas?.

@@ -1,0 +1,1 @@
+Concepto de qué son los errores y cómo manejarlos. Cómo se hacía con returns, la función `exit()` y cómo se hace con excepciones. Sentencias try, except, finally, else, cómo se lanzan y cómo se capturan. Cómo se capturan excepciones de varios tipos en uno y varios bloques. Cómo se lanzan excepciones personalizadas y cómo se capturan.

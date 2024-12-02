@@ -1,0 +1,12 @@
+# Funciones
+Cómo se definen
+parámetros
+named parameters
+parámetros variables
+forzar a parámetros variables
+funciones dentro de funciones dentro de funciones...
+recursividad
+return normal y de tuplas
+yield
+número variable de parámetros
+número variable de parámetros 2 (todo son listas y dicionarios!) dereferenciación

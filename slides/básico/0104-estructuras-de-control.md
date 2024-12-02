@@ -1,0 +1,1 @@
+Condicionales, match y bucles. ¿Meto aquí excepciones? Tiene sentido porque es una forma de control de flujo, pero sin haber visto funciones igual merece la pena un poquito después.

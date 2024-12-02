@@ -1,0 +1,9 @@
+# Clases
+Cómo se definen
+construcción vs. inicialización
+atributos de clase vs atributos de objeto
+propiedades
+__getattr__
+métodos especiales
+herencia. mixins
+functors

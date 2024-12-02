@@ -1,0 +1,1 @@
+Hablar del pep8 y el por qué de algunas de sus reglas más controvertidas, hablar de herramientas que nos mantienen en el cauce de hacer bien las cosas, cómo comentar correctamente, docstrings y cómo documentar nuestro código, cuál es la importancia de la legibilidad.

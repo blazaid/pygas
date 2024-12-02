@@ -1,0 +1,244 @@
+# Tipos de datos y operadores
+
+Hasta este momento, tu código es como una historia que sigue siempre el mismo guión. Pero, ¿y si quisieras tomar
+decisiones o repetir ciertas acciones? Aquí es donde entran las estructuras de control: herramientas que le permiten a
+tu programa adaptarse, decidir, y, si es necesario, entrar en bucles infinitos (cosa peligrosa, pero en ocasiones muy
+útil).
+
+## Condicionales: el arte de tomar decisiones
+
+Los condicionales son como señales de tráfico en tu código: «Si ocurre A, haz B; si no, haz C». Con ellos, puedes
+dirigir el flujo de tu programa en función de ciertas condiciones.
+
+### La estructura básica: `if`, `elif`, `else`
+
+En Python, los condicionales se construyen así:
+
+```python
+if condición:
+    # Código que se ejecuta si la condición es verdadera
+elif otra_condición:
+    # Código que se ejecuta si otra_condición es verdadera
+else:
+    # Código que se ejecuta si ninguna condición anterior es verdadera
+```
+
+Un ejemplo práctico:
+
+```python
+temperatura = 25
+if temperatura > 30:
+    print("Hace calor, ponte protector solar.")
+elif temperatura > 20:
+    print("El clima es agradable, aprovecha el día.")
+else:
+    print("Hace frío, no olvides tu chaqueta.")
+```
+
+Este código evalúa las condiciones en orden. En cuanto encuentra una verdadera, ejecuta el bloque correspondiente y
+salta el resto.
+
+### Condicionales anidados
+
+¿Y si quieres más de una decisión dentro de otra? Python lo permite, aunque es buena práctica no abusar de esto:
+
+```python
+edad = 17
+if edad >= 18:
+    print("Puedes votar.")
+    if edad >= 21:
+        print("También puedes comprar alcohol en algunos países.")
+else:
+    print("Aún no puedes votar.")
+```
+
+### Evaluando varias condiciones
+
+A veces, necesitas evaluar más de una condición al mismo tiempo. Aquí entran en juego los operadores lógicos (`and',
+`or` y `not`).
+
+```python
+hora = 14
+tiene_hambre = True
+
+if hora > 12 and tiene_hambre:
+    print("Es hora de comer.")
+elif not tiene_hambre:
+    print("Aprovecha para trabajar un poco más.")
+```
+
+## Bucles: repitiendo acciones
+
+Los bucles repiten una acción una y otra vez, hasta que se cumple la condición de detención.
+
+### El bucle `for`
+
+El bucle `for` en Python es especialmente interesante porque puede iterar sobre cualquier cosa que sea iterable:
+listas, cadenas, rangos, e incluso diccionarios. La condición de detención está implícita ya que parará cuando haya
+recorrido toda la secuencia de los elementos. Su sintaxis es limpia y directa.
+
+```python
+>>> data = ['Qué', 'me', 'estás', 'contando']
+>>> for i in data:
+...    print(i)
+Qué
+me
+estás
+contando
+```
+
+Pero eso no es todo. Si quieres iterar sobre un rango de números, puedes usar la función `range()`:
+
+```python
+for numero in range(1, 6):
+    print(f"Este es el número {numero}.")
+
+    ¿Sabías que...?
+    range() tiene parámetros adicionales para especificar saltos:
+
+    for numero in range(0, 10, 2):
+        print(numero)  # Imprime números pares entre 0 y 10
+```
+
+### El bucle while
+
+A diferencia de `for`, donde la condición está implícita, `while` requiere una condición explícita que se va a evaluar
+una y otra vez hasta que sea falsa, en cuyo caso parará y saltará a la primera línea después del bloque.
+
+```python
+contador = 0
+while contador < 5:
+    print(f"Contador vale {contador}.")
+    contador += 1
+```
+
+Ten cuidado con los bucles while. Si la condición nunca deja de ser verdadera, el bucle seguirá ejecutándose hasta que detengas tu programa.
+
+### Control del flujo: break, continue y pass
+
+Python (como muchos otros lenguajes) incluye palabras clave para controlar la ejecución dentro de un bucle:
+
+- `break`: Termina el bucle inmediatamente.
+- `continue`: Salta al siguiente ciclo del bucle, ignorando el resto del código.
+
+```python
+for numero in range(10):
+    if numero == 5:
+        print("¡Encontré el número 5, deteniendo el bucle!")
+        break
+    elif numero % 2 == 0:
+        continue  # Ignora el resto si el número es par
+    print(f"Número impar: {numero}")
+```
+
+### El bloque `else` en bucles
+
+Una cosa curiosa en este lenguaje es la existencia de `else` en los bucles. El bloque de `else` se ejecuta siempre y
+cuando el bucle termina de forma natural, es decir, sin que haya sido interrumpido po un `break`.
+
+Esto puede ser especialmente útil, por ejemplo, para realizar alguna acción al final del bucle o para manejar casos en
+los que no se cumplen ciertas condiciones.
+
+#### `else` en bucles `for`
+
+Cuando usas `for` con un bloque `else`, el código dentro de `else` se ejecuta después de que el bucle haya iterado por todos y cada uno de los elementos, pero no si se interrumpe con un `break`.
+
+```python
+numeros = [1, 2, 3, 4, 5]
+for numero in numeros:
+    if numero == 7:
+        print("Encontré el número 7.")
+        break
+else:
+    print("El número 7 no está en la lista.")
+```
+
+En este caso, como no hay un 7 en la lista, el bucle termina normalmente, y se ejecuta el bloque `else`.
+
+#### `else` en bucles `while`
+
+Con `while`, el bloque `else` se ejecuta solo si la condición del bucle se vuelve falsa de manera natural, y no si el
+bucle se interrumpe con un `break`.
+
+```python
+contador = 0
+while contador < 5:
+    print(f"Contador: {contador}")
+    contador += 1
+    if contador == 3:
+        break
+else:
+    print("El bucle terminó sin interrupciones.")
+```
+
+En este caso, el `break` interrumpe el bucle cuando contador es igual a 3, por lo que el bloque `else` no se ejecuta.
+
+#### ¿Cuándo usar el `else` en bucles?
+
+El bloque `else` en bucles puede ser útil para:
+
+- Confirmar que todas las iteraciones se completaron.
+- Manejar casos donde una condición no se cumplió en ninguna iteración.
+- Evitar variables auxiliares para comprobar estados.
+
+Por ejemplo, si buscas un elemento en una lista y quieres hacer algo solo si no está:
+
+```python
+lista = [10, 20, 30, 40]
+buscado = 25
+
+for elemento in lista:
+    if elemento == buscado:
+        print(f"Encontrado: {buscado}")
+        break
+else:
+    print(f"{buscado} no está en la lista.")
+```
+
+## Usando bucles y condicionales juntos
+
+A menudo, combinarás bucles y condicionales para resolver problemas más complejos. Aquí tienes un ejemplo:
+
+```python
+nombres = ["Ana", "Juan", "Roberto", "Sofía"]
+for nombre in nombres:
+    if nombre.startswith("R"):
+        print(f"{nombre} tiene un nombre que comienza con R.")
+    else:
+        print(f"{nombre} no empieza con R.")
+```
+
+## Errores comunes y cómo evitarlos
+
+### Bucle infinito en `while`
+
+Si olvidas actualizar la condición del bucle, este nunca terminará. Es un error muy típico, no te fustigues por ello.
+Simplemente intenta recordar siempre que hay que modificar las variables involucradas en la condición.
+
+```python
+x = 0
+while x < 5:
+    print("Esto nunca parará... si no aumento x.")
+    # Falta: x += 1
+```
+
+### Indentación incorrecta
+
+Python es muy estricto con la indentación de los bloques y otra cosa no será, pero en condicionales y bucles solemos
+tener bastantes. Si olvidas indentar correctamente, obtendrás errores como:
+
+```python
+IndentationError: expected an indented block
+```
+
+### Condiciones ambiguas
+
+Asegúrate de que las condiciones de tus `if` sean claras y completas. Parece de perogrullo, pero es alucinante la
+cantidad de veces que en lenguaje natural decimos `and` cuando queremos decir `or` y viceversa.
+
+---
+
+## TODO
+
+- En condicionales tengo que hablar del control con match
+- En algún momento habrá que hablar de la keyword `pass`

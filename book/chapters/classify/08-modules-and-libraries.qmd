@@ -1,0 +1,9 @@
+# Importando librerías, módulos y clases
+Como no es plan de escribir toda nuestra aplicación en un sólo fichero, ni de implementar todo lo que necesitamos, vamos a ver cómo acceder a funciones y clases de librerías de terceros y cómo crear nuestros módulos para reutilizar.
+import ...
+from ... import ...
+import xxx as yyy
+módulos
+paquetes y el __init__.py
+Cuidado con las dependencias circulares! formas de evitar
+__name__
